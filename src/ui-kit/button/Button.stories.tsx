@@ -7,5 +7,5 @@ const stories = storiesOf('Button', module);
 
 stories.add(
     'test',
-    () => [<Button>Test</Button>],
+    () => <Button>Test</Button>
 );
