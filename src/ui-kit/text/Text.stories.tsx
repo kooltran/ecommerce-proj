@@ -1,37 +1,34 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
-import Text from './Text';
+import { storiesOf } from '@storybook/react'
+import { withInfo } from '@storybook/addon-info'
+import Text from './Text'
 
 storiesOf('Conversation/UI-Kit/Text', module)
   .add(
     'Default',
     withInfo({ header: true })(() => (
-      <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+      <Text>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.{' '}
+      </Text>
     ))
   )
   .add(
     'Bold',
     withInfo({ header: true })(() => (
-      <Text isBold={true}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+      <Text isBold={true}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </Text>
     ))
   )
   .add(
     'Italic',
     withInfo({ header: true })(() => (
       <Text isItalic={true}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      </Text>
-    ))
-  )
-  .add(
-    'with HTML',
-    withInfo({ header: true })(() => (
-      <Text isHtml={true}>
-        {
-          'Lorem <strong>Lorem ipsum</string> Lorem Ipsum is simply dummy text of the printing <i>and typesetting industry.  </i>?'
-        }
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
       </Text>
     ))
   )
@@ -39,9 +36,14 @@ storiesOf('Conversation/UI-Kit/Text', module)
     'with Heading',
     withInfo({ header: true })(() => (
       <>
-        <Text isBold={true} isBlock={true}>Ciao</Text>
+        <Text isBold={true} isBlock={true}>
+          Ciao
+        </Text>
 
-        <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+        <Text>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.{' '}
+        </Text>
       </>
     ))
   )
