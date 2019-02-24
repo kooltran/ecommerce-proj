@@ -2,40 +2,40 @@ import * as React from 'react'
 import classnames from 'classnames'
 
 export interface ITextProps {
-  children: any
-  className?: string
-  isHtml?: boolean
-  isBlock?: boolean
-  isBold?: boolean
-  isItalic?: boolean
-  onClick?: (e: any) => void
-  isI18n?: boolean
+    children: any
+    className?: string
+    isHtml?: boolean
+    isBlock?: boolean
+    isBold?: boolean
+    isItalic?: boolean
+    onClick?: (e: any) => void
+    isI18n?: boolean
 }
 
 const Text: React.SFC<ITextProps> = ({
-  isHtml,
-  isItalic,
-  isBold,
-  children,
-  isBlock,
-  onClick,
-  className,
+    isHtml,
+    isItalic,
+    isBold,
+    children,
+    isBlock,
+    onClick,
+    className,
 }) => {
-  const styleText = classnames(className, {
-    text__text: true,
-    'text--bold': isBold,
-    'text--italic': isItalic,
-    'text--block': isBlock,
-  })
+    const styleText = classnames(className, {
+        text__text: true,
+        'text--bold': isBold,
+        'text--italic': isItalic,
+        'text--block': isBlock,
+    })
 
-  return (
-    <span
-      className={`text ${styleText}`}
-      onClick={onClick ? onClick : () => null}
-    >
-      {children}
-    </span>
-  )
+    return (
+        <span
+            className={`text ${styleText}`}
+            onClick={onClick ? onClick : () => null}
+        >
+            {children}
+        </span>
+    )
 }
 
 export default Text
