@@ -5,45 +5,45 @@ import { withInfo } from '@storybook/addon-info'
 import Text from './Text'
 
 storiesOf('Conversation/UI-Kit/Text', module)
-  .add(
-    'Default',
-    withInfo({ header: true })(() => (
-      <Text>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
+    .add(
+        'Default',
+        withInfo({ header: true })(() => (
+            <Text>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
         industry.{' '}
+            </Text>
+        ))
+    )
+    .add(
+        'Bold',
+        withInfo({ header: true })(() => (
+            <Text isBold={true}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
       </Text>
-    ))
-  )
-  .add(
-    'Bold',
-    withInfo({ header: true })(() => (
-      <Text isBold={true}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
+        ))
+    )
+    .add(
+        'Italic',
+        withInfo({ header: true })(() => (
+            <Text isItalic={true}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
       </Text>
-    ))
-  )
-  .add(
-    'Italic',
-    withInfo({ header: true })(() => (
-      <Text isItalic={true}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </Text>
-    ))
-  )
-  .add(
-    'with Heading',
-    withInfo({ header: true })(() => (
-      <>
-        <Text isBold={true} isBlock={true}>
-          Ciao
+        ))
+    )
+    .add(
+        'with Heading',
+        withInfo({ header: true })(() => (
+            <>
+                <Text isBold={true} isBlock={true}>
+                    Ciao
         </Text>
 
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+                <Text>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.{' '}
-        </Text>
-      </>
-    ))
-  )
+                </Text>
+            </>
+        ))
+    )
