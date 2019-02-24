@@ -23,7 +23,7 @@
     "typescript": "3.2.2"
   },
   "scripts": {
-    "start": "yarn lint && node scripts/start.js",
+    "start": "yarn lint && react-scripts start",
     "build": "node scripts/build.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -45,7 +45,13 @@
     "@storybook/addon-info": "^4.1.13",
     "@storybook/addon-links": "^4.1.13",
     "@storybook/react": "^4.1.13",
+    "@types/classnames": "^2.2.7",
+    "@types/react-test-renderer": "^16.8.1",
+    "@types/storybook__addon-info": "^4.1.0",
+    "@types/storybook__react": "^4.0.1",
+    "classnames": "^2.2.6",
     "customize-cra": "^0.2.11",
+    "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "react-app-rewired": "^2.1.0",
     "react-test-renderer": "^16.8.3",
