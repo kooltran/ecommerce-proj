@@ -17,3 +17,5 @@ export const request = {
       body: JSON.stringify(body),
     }),
 }
+
+declare module '*.png'
