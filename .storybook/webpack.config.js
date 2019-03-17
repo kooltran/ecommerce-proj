@@ -11,5 +11,10 @@ module.exports = (baseConfig, env, config) => {
         }
     });
 
+    config.resolve.alias['@StylesVariables'] = path.resolve(
+        __dirname,
+        '../src/ui-kit/styles/_variables.scss'
+    );
+
     return config;
 }

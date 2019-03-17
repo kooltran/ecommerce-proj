@@ -47,6 +47,7 @@
     "@storybook/react": "^4.1.13",
     "@types/classnames": "^2.2.7",
     "@types/react-test-renderer": "^16.8.1",
+    "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-info": "^4.1.0",
     "@types/storybook__react": "^4.0.1",
     "classnames": "^2.2.6",

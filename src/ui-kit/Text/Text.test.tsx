@@ -1,8 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Text from './'
+import Text from './Text'
 
-it('renders button', () => {
-  const tree = renderer.create(<Text>Test</Text>).toJSON()
+it('should render', () => {
+  const tree = renderer.create(<Text>Lorem Ipsum is simply dummy text of the printing and typesetting
+    industry.</Text>).toJSON()
   expect(tree).toMatchSnapshot()
 })

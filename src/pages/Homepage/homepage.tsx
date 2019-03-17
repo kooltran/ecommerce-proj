@@ -2,6 +2,7 @@ import * as React from 'react'
 import { actionTypes } from '../../constants'
 import { homepageAction } from './homepage.action'
 import { connect } from 'react-redux'
+import { Text } from '../../ui-kit/Text'
 
 export interface IHomepage {
   homepageAction: () => void
@@ -14,7 +15,12 @@ class Homepage extends React.Component<IHomepage> {
 
   public render() {
     console.log(this.props)
-    return <div>Homepage</div>
+    return (
+      <Text isBold={true}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </Text>
+    )
   }
 }
 
