@@ -1,0 +1,31 @@
+@import '../styles/variables';
+
+.text {
+    margin-right: 5px;
+    display: inline-block;
+  
+    &__text {
+      color: $color-black;
+      line-height: 19px;
+    }
+  
+    &--bold {
+      font-weight: 600;
+    }
+    &--italic {
+      font-style: italic;
+    }
+  
+    &--block {
+      display: block;
+    }
+  
+    &--white {
+      color: $color-white;
+    }
+
+    &--link {
+        cursor: pointer;
+    }
+}
+  

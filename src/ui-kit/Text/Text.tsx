@@ -1,21 +1,21 @@
 import * as React from 'react'
 import classnames from 'classnames'
+import './Text.scss'
 
 export interface ITextProps {
     children: any
     className?: string
-    isHtml?: boolean
     isBlock?: boolean
     isBold?: boolean
+    isLink?: boolean
     isItalic?: boolean
     onClick?: (e: any) => void
-    isI18n?: boolean
 }
 
 const Text: React.SFC<ITextProps> = ({
-    isHtml,
     isItalic,
     isBold,
+    isLink,
     children,
     isBlock,
     onClick,
@@ -26,6 +26,7 @@ const Text: React.SFC<ITextProps> = ({
         'text--bold': isBold,
         'text--italic': isItalic,
         'text--block': isBlock,
+        'text--link': isLink,
     })
 
     return (

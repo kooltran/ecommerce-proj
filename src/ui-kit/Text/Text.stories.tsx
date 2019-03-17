@@ -2,7 +2,8 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import Text from './'
+import { action } from '@storybook/addon-actions';
+import Text from './Text'
 
 storiesOf('Conversation/UI-Kit/Text', module)
   .add(
@@ -10,7 +11,7 @@ storiesOf('Conversation/UI-Kit/Text', module)
     withInfo({ header: true })(() => (
       <Text>
         Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.{' '}
+        industry
       </Text>
     ))
   )
@@ -33,17 +34,20 @@ storiesOf('Conversation/UI-Kit/Text', module)
     ))
   )
   .add(
-    'with Heading',
+    'TextLink',
+    withInfo({ header: true })(() => (
+      <Text isLink={true} onClick={action('>>> TextLink')}>Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry.</Text>
+    ))
+  )
+  .add(
+    'Text Block',
     withInfo({ header: true })(() => (
       <>
-        <Text isBold={true} isBlock={true}>
-          Ciao
-        </Text>
-
-        <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.{' '}
-        </Text>
+        <Text isBlock={true}>Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry.</Text>
+        <Text isBlock={true}>Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry.</Text>
       </>
     ))
   )
