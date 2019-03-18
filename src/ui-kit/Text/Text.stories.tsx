@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info'
 import { action } from '@storybook/addon-actions';
 import Text from './Text'
 
-storiesOf('Conversation/UI-Kit/Text', module)
+storiesOf('Ecommerce/UI-Kit/Text', module)
   .add(
     'Default',
     withInfo({ header: true })(() => (

@@ -1,0 +1,32 @@
+@import '../styles/variables';
+@import "~antd/dist/antd.css";
+
+
+.btn {
+    border-radius: 0;
+
+    &-bg {
+        background: $color-pink;
+        border: 1px solid $color-pink;
+        color: $color-white;
+
+        &:hover {
+            border: 1px solid $color-pink;
+            background: transparent;
+            color: $color-black;
+        }
+    }
+
+    &.ant-btn-lg {
+        height: 44px;
+    }
+
+    &-outline {
+        border: 1px solid $color-pink;
+
+        &:hover {
+            background: $color-pink;
+            color: $color-white;
+        }
+    }
+}
