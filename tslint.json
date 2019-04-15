@@ -10,13 +10,20 @@
   "rules": {
     "ordered-imports": false,
     "object-literal-sort-keys": false,
+    "member-access": [
+      true,
+      "no-public"
+    ],
     "member-ordering": false,
     "jsx-no-lambda": false,
     "jsx-boolean-value": false,
     "no-console": false,
     "no-namespace": false,
     "no-module": false,
-    "interface-name": [false, "never"]
+    "interface-name": [
+      false,
+      "never"
+    ]
   },
   "rulesDirectory": []
 }
