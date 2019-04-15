@@ -12,7 +12,7 @@ import { Provider } from 'react-redux'
 const store = configureStore()
 
 export default class Layout extends React.Component<{}, {}> {
-  public render() {
+  render() {
     return (
       <Provider store={store}>
         <Router>

@@ -4,6 +4,9 @@ import Text from '../Text/Text';
 import ProdColorThumb from './ProdColorThumb';
 import { IProdItem } from '../../../src/interfaces/prod-item';
 import Slider from 'react-slick';
+import { ShoeColor } from '../../../src/interfaces/shoe-color';
+import classnames from 'classnames'
+
 
 export interface IProdItemProps {
     prodItem: IProdItem;
@@ -19,22 +22,34 @@ const settingThumbSlide = {
 };
 
 export default class ProItem extends React.Component<IProdItemProps> {
+    state = {
+        activeColor: this.props.prodItem.shoeColors[0]
+    }
 
-    renderColorThumbList() {
-        return this.props.prodItem.shoeColors.map(color => <ProdColorThumb color={color} />)
+    private onHoverColor = (color: ShoeColor) => {
+        this.setState({
+            activeColor: color
+        })
+    }
+
+    private renderColorThumbList() {
+        return this.props.prodItem.shoeColors.map(color => <ProdColorThumb key={color.name} color={color} onHoverColor={this.onHoverColor} />)
     }
 
     render() {
         return (
-            <div className="prod__item">
-                <img className="prod__item--img" src={this.props.prodItem.shoeColors[0].image} alt={this.props.prodItem.name} />
+            <div className={classnames({
+                'prod__item': true,
+                'prod__item--thumb': this.props.hasColorThumb
+            })}>
+                <img className="prod__item--img" src={this.state.activeColor.image} alt={this.props.prodItem.name} />
+                <Text isBlock={true} className="prod__item--name">{this.props.prodItem.name}</Text>
                 {
                     this.props.hasColorThumb &&
-                    <Slider {...settingThumbSlide}>
+                    <Slider {...settingThumbSlide} className="prod__thumb">
                         {this.renderColorThumbList()}
                     </Slider>
                 }
-                <Text isBlock={true} className="prod__item--name">{this.props.prodItem.name}</Text>
                 <Text isBlock={true} isBold={true} className="prod__item--price">{this.props.prodItem.price}</Text>
             </div>
         )
