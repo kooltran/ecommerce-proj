@@ -9,11 +9,11 @@ export interface IHomepage {
 }
 
 class Homepage extends React.Component<IHomepage> {
-  public componentDidMount() {
+  componentDidMount() {
     this.props.homepageAction()
   }
 
-  public render() {
+  render() {
     console.log(this.props)
     return (
       <Text isBold={true}>
@@ -25,7 +25,6 @@ class Homepage extends React.Component<IHomepage> {
 }
 
 const mapStateToProps = (state: any) => {
-  console.log(state, 'state')
   return {
     data: 'state.homeReducer.data',
   }

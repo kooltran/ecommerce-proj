@@ -20,7 +20,7 @@ const InputCheckBox: React.SFC<IInputProps> = ({
         <label className={styleInputCheckbox}>
             {checkboxLabel}
             <input type="checkbox" />
-            <span className="checkmask"></span>
+            <span className="checkmask" />
         </label>
     )
 }
