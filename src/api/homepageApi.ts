@@ -1,5 +1,5 @@
-import { request } from '../../src/helpers'
-import { API_URL } from '../../src/constants'
+import { request } from 'utils'
+import { API_URL } from 'config'
 
 export const homepageApi = () => {
   return request.get(`${API_URL.BASE}/init`)

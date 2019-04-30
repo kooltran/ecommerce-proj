@@ -1,8 +1,7 @@
 import * as React from 'react'
-import { actionTypes } from '../../constants'
 import { homepageAction } from './homepage.action'
 import { connect } from 'react-redux'
-import { Text } from '../../ui-kit/Text'
+import { Text } from 'ui-kit/Text'
 
 export interface IHomepage {
   homepageAction: () => void

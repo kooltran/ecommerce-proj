@@ -19,7 +19,7 @@
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "3.0.0",
     "react-spring": "^8.0.19",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
@@ -31,7 +31,7 @@
   "scripts": {
     "start": "yarn lint && react-scripts start",
     "build": "node scripts/build.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_PATH=src start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
     "test": "react-scripts test",
@@ -49,6 +49,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-info": "^4.1.13",
+    "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-links": "^4.1.13",
     "@storybook/react": "^4.1.13",
     "@types/classnames": "^2.2.7",
@@ -56,6 +57,7 @@
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-info": "^4.1.0",
     "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
     "customize-cra": "^0.2.11",
     "node-sass": "^4.11.0",

@@ -1,5 +1,5 @@
-import { actionTypes } from '../../constants'
-import { homepageApi } from '../../api/homepageApi'
+import { actionTypes } from 'config'
+import { homepageApi } from 'api/homepageApi'
 
 export const homepageAction = () => {
   return (dispatch: any) => {

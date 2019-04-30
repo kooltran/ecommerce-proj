@@ -1,4 +1,4 @@
-import { actionTypes } from '../../constants'
+import { actionTypes } from 'config'
 
 export interface IHomePageReducer {
   initRequest: boolean

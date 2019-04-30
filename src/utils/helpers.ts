@@ -1,9 +1,4 @@
-export interface IRequestParams {
-  url: string
-  body: any
-  username: string
-  email: string
-}
+import { IRequestParams } from './index'
 
 export const request = {
   get: (url: string) => {
