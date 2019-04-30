@@ -16,7 +16,7 @@ export interface ISubNavItemProps {
 export interface INavItemProps {
   name: string
   isActive?: boolean
-  subNav?: Array<ISubNavItemProps>
+  subNav?: ISubNavItemProps[]
 }
 
 const NavItem: React.SFC<INavItemProps> = ({name, isActive=false, subNav=[], children}) => {
