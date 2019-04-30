@@ -1,0 +1,58 @@
+@import '../styles/variables';
+
+.nav {
+
+  &__item {
+    border-bottom: 1px solid $color-gray;
+    text-align: center;
+
+    &:nth-child(1) {
+      border-top: 1px solid $color-gray;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    padding: 9px 20px 9px 0;
+    font-size: 16px;
+    color: $color-heavy-gray;
+    padding-right: 20px;
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+
+  &__sub-item  {
+    border-top: 1px solid $color-gray;
+    transition: max-height 1s ease;
+  }
+
+  &__arrow {
+    margin-left: auto;
+  }
+
+  .nav__sub-list {
+    display: block;
+    max-height: 500px;
+
+    &.none {
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    &__item {
+      text-align: left;
+    }
+    &__link {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}
