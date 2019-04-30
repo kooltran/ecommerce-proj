@@ -4,26 +4,21 @@
     "tslint:recommended",
     "tslint-config-standard",
     "tslint-react",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "tslint-react-hooks"
   ],
   "jsRules": {},
   "rules": {
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "member-access": [
-      true,
-      "no-public"
-    ],
+    "member-access": [true, "no-public"],
     "member-ordering": false,
     "jsx-no-lambda": false,
     "jsx-boolean-value": false,
     "no-console": false,
     "no-namespace": false,
     "no-module": false,
-    "interface-name": [
-      false,
-      "never"
-    ]
+    "interface-name": [false, "never"]
   },
   "rulesDirectory": []
 }

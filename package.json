@@ -60,6 +60,8 @@
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
     "customize-cra": "^0.2.11",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "react-app-rewired": "^2.1.0",
@@ -70,6 +72,18 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-react": "^3.6.0",
+    "tslint-react-hooks": "^2.1.0",
     "typescript-eslint-parser": "^21.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "tslint -c tslint.json --fix",
+      "git add"
+    ]
   }
 }
