@@ -51,7 +51,7 @@ export default class ProItem extends React.Component<IProdItemProps> {
       >
         <img
           className="prod__item--img"
-          src={this.state.activeColor.image}
+          src={this.state.activeColor.image[0]}
           alt={this.props.prodItem.name}
         />
         <Text isBlock={true} className="prod__item--name">

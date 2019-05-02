@@ -1,4 +1,4 @@
 export interface ShoeColor {
-    name: string,
-    image: string
+  name: string
+  image: string[]
 }

@@ -1,0 +1,26 @@
+@import '../styles/variables';
+
+.prod {
+    &__detail {
+        &--main-list {
+            margin-bottom: 10px;
+
+            .detail-image {
+                width: 100%;
+            }
+        }
+
+        &--thumb-list {
+            .detail-image {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .slick-current {
+                .detail-image {
+                    border: 1px solid $color-dark-gray;
+                }
+            }
+        }
+    }
+}

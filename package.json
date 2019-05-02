@@ -83,7 +83,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "tslint -c tslint.json --fix",
+      "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
       "git add"
     ]
   }
