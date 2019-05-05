@@ -34,13 +34,10 @@
   }
 
   .nav__sub-list {
-    display: block;
-    max-height: 500px;
-
-    &.none {
-      display: none;
-      max-height: 0;
-      overflow: hidden;
+    > .nav__item {
+      &:last-child {
+        border-bottom: 1px none $color-gray;
+      }
     }
   }
 }
