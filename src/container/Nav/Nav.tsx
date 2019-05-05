@@ -18,8 +18,15 @@ const Nav: React.SFC<INavProps> = ({ className }) => {
     <nav className={styleNav}>
       <div className="nav__list">
         <NavItem name="home" isActive />
-        <NavItem name="catalog" subNav={data} />
-        <NavItem name="example" subNav={data} />
+        <NavItem name="catalog" hasSubNav={Boolean(data.length)}>
+          {
+            data.map(item => <NavItem name={item.name} key={item.id} hasSubNav={Boolean(item.subData.length)}>
+              {
+                item.subData.map(itemX => <NavItem name={itemX.name} key={itemX.id}/>)
+              }
+            </NavItem>)
+          }
+        </NavItem>
         <NavItem name="blog" />
         <NavItem name="about us" />
       </div>
