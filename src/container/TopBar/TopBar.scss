@@ -1,0 +1,31 @@
+@import '../../ui-kit/styles/variables';
+
+.topbar {
+  border-bottom: 1px solid $color-dark-gray;
+  display: flex;
+  &__seach {
+    .anticon-search {
+      padding-left: 10px;
+    }
+    .input-text {
+      border: none;
+      height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__payment {
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+    .cart {
+      &__text {
+        padding-left: 5px;
+      }
+    }
+    .checkout {
+      padding-left: 20px;
+    }
+  }
+}
