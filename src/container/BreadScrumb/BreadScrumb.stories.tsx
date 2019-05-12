@@ -2,12 +2,12 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import Nav from './Nav'
+import BreadScrumb from './BreadScrumb'
 
-storiesOf('Ecommerce/Container/Nav', module)
+storiesOf('Ecommerce/Container/BreadScrumb', module)
   .add(
     'Default',
     withInfo({ header: true })(() => (
-      <Nav />
+      <BreadScrumb />
     ))
   )
