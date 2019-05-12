@@ -1,5 +1,4 @@
 import React from 'react'
-import classnames from 'classnames'
 import {Icon} from 'antd'
 
 import {InputText} from '../../ui-kit/Input/InputText';
