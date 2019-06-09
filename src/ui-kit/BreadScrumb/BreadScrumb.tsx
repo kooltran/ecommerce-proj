@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import { Icon } from 'antd'
 
 import data from './data'
-import {Text} from '../../ui-kit/Text'
+import {Text} from '../Text'
 import './BreadScrumb.scss'
 
 export interface IBreadScrumbProps {

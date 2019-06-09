@@ -1,0 +1,43 @@
+@import '../styles/variables';
+
+.footer {
+  background-color: $color-light-gray;
+  font-family: "PT Serif";
+  padding-bottom: 30px;
+  .input-text {
+    border: 0;
+  }
+  &__row {
+    display: flex;
+  }
+  &__menu {
+    border-top: 1px solid $color-dark-gray;
+    border-bottom: 1px solid $color-dark-gray;
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__col {
+    flex: 1 1 50%;
+    margin-top: 30px;
+  }
+  &__heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &__link {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  &__label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .input-text {
+    background-color: $color-white;
+    flex: 1;
+    height: 32px;
+  }
+}
