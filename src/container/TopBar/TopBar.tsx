@@ -1,5 +1,6 @@
 import React from 'react'
 import {Icon} from 'antd'
+import { Link } from 'react-router-dom'
 
 import {InputText} from '../../ui-kit/Input/InputText';
 import {Text} from '../../ui-kit/Text';
@@ -12,7 +13,11 @@ export interface ITopBarProps {
 const TopBar: React.SFC<ITopBarProps> = ({className}) => {
   return (
     <div className="topbar">
-      <div className="topbar__seach"><Icon type="search" style={{fontSize: '18px'}}/><InputText placeHolder="Search" /></div>
+      <div className="topbar__search">
+        <Icon type="search" style={{fontSize: '18px'}} className="topbar__search-icon"/>
+        <InputText placeHolder="Search" />
+        <Link to="/search" className="topbar__search__link"><Icon type="search" style={{fontSize: '18px'}}/></Link>
+      </div>
       <div className="topbar__payment">
         <div className="cart">
           <Icon type="shopping-cart" style={{fontSize: '18px'}}/>
