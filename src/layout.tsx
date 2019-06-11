@@ -8,6 +8,10 @@ import {
 import Homepage from '../src/pages/Homepage'
 import configureStore from '../src/redux/store'
 import { Provider } from 'react-redux'
+import {TopBar} from './container/TopBar'
+import {Nav} from './container/Nav'
+import {BreadScrumb} from './ui-kit/BreadScrumb'
+import {Footer} from './ui-kit/Footer'
 
 const store = configureStore()
 
@@ -16,9 +20,20 @@ export default class Layout extends React.Component<{}, {}> {
     return (
       <Provider store={store}>
         <Router>
-          <Switch>
-            <Route path="/" component={Homepage} />
-          </Switch>
+          <div className="wrapper">
+            <TopBar />
+            logo
+            <div className="main d-flex">
+              <Nav />
+              <div className="main-content">
+                <BreadScrumb />
+                  <Switch>
+                    <Route path="/" component={Homepage} />
+                  </Switch>
+              </div>
+            </div>
+            <Footer />
+          </div>
         </Router>
       </Provider>
     )

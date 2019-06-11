@@ -1,0 +1,19 @@
+.nav {
+  &__menu {
+    text-align: center;
+  }
+  &__list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav {
+    &__menu {
+      display: none;
+    }
+    &__list {
+      display: block;
+    }
+  }
+}
