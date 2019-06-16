@@ -1,0 +1,42 @@
+@import '../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid $color-gray;
+
+  &-cart-checkout {
+    display: flex;
+    align-items: center;
+  }
+
+  &-cart {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+
+    .icon-cart {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+
+  &-search {
+    display: flex;
+    align-items: center;
+
+    .input-text {
+      border: 0;
+      padding-left: 10px;
+      margin-left: 10px;
+      height: 35px;
+      width: 250px;
+      font-size: 14px;
+    }
+
+    .icon-search {
+      font-size: 20px;
+    }
+  }
+}

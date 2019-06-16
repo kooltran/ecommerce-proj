@@ -1,66 +1,65 @@
 @import '../styles/variables';
 
 .input {
-    &-text {
-        border: 1px solid $color-black;
-        background: transparent;
-        outline: none;
+  &-text {
+    border: 1px solid $color-black;
+    background: transparent;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-icon {
+    border: 0;
+    border-bottom: 1px solid $color-black;
+  }
+
+  &-checkbox {
+    display: block;
+    position: relative;
+    font-size: 16px;
+
+    &__label {
+      padding-left: 35px;
     }
 
-    &-wrapper {
-        position: relative;
-    }
+    input {
+      &[type='checkbox'] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
 
-    &-icon {
-        border: 0;
-        border-bottom: 1px solid $color-black;
-    }
-
-    &-checkbox {
-        display: block;
-        position: relative;
-        font-size: 16px;
-
-        &__label {
-            padding-left: 35px;
+        &:checked ~ .checkmask {
+          &:after {
+            display: block;
+          }
         }
-
-        input {
-            &[type="checkbox"] {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-
-                &:checked ~ .checkmask {
-                    &:after {
-                        display: block;
-                    }
-                }
-            }
-        }
-        
-        .checkmask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            border: 1px solid $color-black;
-    
-            &:after {
-                content: "";
-                position: absolute;
-                display: none;
-                left: 9px;
-                top: 5px;
-                width: 5px;
-                height: 10px;
-                border: solid $color-black;
-                border-width: 0 3px 3px 0;
-                transform: rotate(45deg);
-            }
-        }
+      }
     }
+
+    .checkmask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: 1px solid $color-black;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $color-black;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }

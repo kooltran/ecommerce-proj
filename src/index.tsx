@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
-import Layout from './layout'
+import App from './App'
 import './index.scss'
 
 
-ReactDom.render(<Layout />, document.getElementById('root'))
+ReactDom.render(<App />, document.getElementById('root'))

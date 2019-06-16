@@ -25,7 +25,7 @@ class Homepage extends React.Component<IHomepage> {
 
 const mapStateToProps = (state: any) => {
   return {
-    data: 'state.homeReducer.data',
+    data: state.homeReducer.data,
   }
 }
 
