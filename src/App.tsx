@@ -5,13 +5,13 @@ import {
   Switch,
   // RouteComponentProps,
 } from 'react-router-dom'
-import Homepage from '../src/pages/Homepage'
-import configureStore from '../src/redux/store'
+import Homepage from './pages/Homepage'
+import configureStore from './redux/store'
 import { Provider } from 'react-redux'
 
 const store = configureStore()
 
-export default class Layout extends React.Component<{}, {}> {
+export default class App extends React.Component<{}, {}> {
   render() {
     return (
       <Provider store={store}>
