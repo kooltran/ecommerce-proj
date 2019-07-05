@@ -1,1 +1,3 @@
-export { default as ProdItem } from './ProdItem'
+import ProdItem from './ProdItem'
+
+export default ProdItem

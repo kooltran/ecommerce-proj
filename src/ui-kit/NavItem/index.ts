@@ -1,1 +1,3 @@
-export { default as NavItem } from './NavItem'
+import NavItem from './NavItem'
+
+export default NavItem

@@ -1,4 +1,4 @@
-import { actionTypes } from 'config'
+import { actionTypes } from 'config/constants'
 
 export interface IHomePageReducer {
   initRequest: boolean
@@ -9,7 +9,7 @@ export interface IHomePageReducer {
 }
 
 const initialState = {
-  initRequest: false,
+  initRequest: true,
   initSuccess: false,
   initFail: false,
   data: {},
@@ -26,14 +26,15 @@ export default function homeReducer(state = initialState, action: any) {
     case actionTypes.FETCH_INIT_SUCCESS:
       return {
         ...state,
-        initSuccess: true,
-        data: action.payload,
+        initRequest: false,
+        initSuccess: false,
+        data: action.res,
       }
     case actionTypes.FETCH_INIT_FAIL:
       return {
         ...state,
         initFail: true,
-        error: action.payload,
+        error: action.res,
       }
     default:
       return state

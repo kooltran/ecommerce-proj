@@ -1,4 +1,4 @@
-import { actionTypes } from 'config'
+import { actionTypes } from 'config/constants'
 import { homepageApi } from 'api/homepageApi'
 
 export const homepageAction = () => {

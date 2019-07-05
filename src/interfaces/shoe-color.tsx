@@ -1,4 +1,6 @@
+import { IShoeImage } from './shoe-image'
+
 export interface ShoeColor {
   name: string
-  image: string[]
+  images: IShoeImage[]
 }

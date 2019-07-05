@@ -3,10 +3,16 @@ import classnames from 'classnames'
 import { useSpring, animated } from 'react-spring'
 import { Icon } from 'antd'
 
-import { useMeasure } from 'hooks'
+import { useMeasure } from '../../hooks/helpers'
 
-import { Text } from 'ui-kit/Text'
+import Text from 'ui-kit/Text/Text'
 import './NavItem.scss'
+
+console.log({
+  useMeasure,
+  useSpring,
+  Text,
+})
 
 export interface ISubNavItemProps {
   id: string
@@ -23,7 +29,6 @@ const NavItem: React.SFC<INavItemProps> = ({
   name,
   isActive = false,
   subNav = [],
-  children,
 }) => {
   const [isOpen, toggleOpen] = useState(false)
 

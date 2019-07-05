@@ -1,4 +1,4 @@
-import { IRequestParams } from './index'
+import { IRequestParams } from 'interfaces/request-type'
 
 export const request = {
   get: (url: string) => {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import './ProdDetailImage.scss'
-import { IProdItem } from '../../interfaces/prod-item'
+import { IProdItem } from 'interfaces/prod-item'
 import Slider from 'react-slick'
 
 export interface IProdDetailProps {
@@ -36,11 +36,11 @@ export default class ProdDetailImage extends React.Component<
   }
 
   renderImageList() {
-    return this.props.prodDetailItem.shoeColors[0].image.map(
+    return this.props.prodDetailItem.shoeColors[0].images.map(
       (imgItem, index) => {
         return (
           <div key={index} className="prod__detail--image--item">
-            <img className="detail-image" src={imgItem} alt={imgItem} />
+            <img className="detail-image" src={imgItem.md} alt={imgItem.md} />
           </div>
         )
       }

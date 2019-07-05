@@ -4,5 +4,3 @@ export interface IRequestParams {
   username: string
   email: string
 }
-
-export { request } from './helpers'

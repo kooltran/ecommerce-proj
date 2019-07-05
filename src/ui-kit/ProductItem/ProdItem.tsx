@@ -25,6 +25,10 @@ export default class ProItem extends React.Component<IProdItemProps> {
     activeColor: this.props.prodItem.shoeColors[0],
   }
 
+  static defaultProps = {
+    hasColorThumb: false,
+  }
+
   private onHoverColor = (color: ShoeColor) => {
     this.setState({
       activeColor: color,
@@ -42,28 +46,33 @@ export default class ProItem extends React.Component<IProdItemProps> {
   }
 
   render() {
+    const { hasColorThumb, prodItem } = this.props
     return (
       <div
         className={classnames({
           prod__item: true,
-          'prod__item--thumb': this.props.hasColorThumb,
+          'prod__item--thumb': hasColorThumb,
         })}
       >
         <img
           className="prod__item--img"
-          src={this.state.activeColor.image[0]}
-          alt={this.props.prodItem.name}
+          src={
+            hasColorThumb
+              ? this.state.activeColor.images[0].md
+              : prodItem.shoeColors[0].images[0].md
+          }
+          alt={prodItem.name}
         />
         <Text isBlock={true} className="prod__item--name">
-          {this.props.prodItem.name}
+          {prodItem.name}
         </Text>
-        {this.props.hasColorThumb && (
+        {hasColorThumb && (
           <Slider {...settingThumbSlide} className="prod__thumb">
             {this.renderColorThumbList()}
           </Slider>
         )}
         <Text isBlock={true} isBold={true} className="prod__item--price">
-          {this.props.prodItem.price}
+          {prodItem.price}
         </Text>
       </div>
     )

@@ -4,18 +4,16 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { prodItemData } from './ProdItem.data'
 import ProdItem from './ProdItem'
-
+console.log(prodItemData, 'prodItemData')
 
 storiesOf('Ecommerce/UI-Kit/ProductItem', module)
-    .add(
-        'default',
-        withInfo({ header: true })(() => (
-            <ProdItem prodItem={prodItemData} />
-        ))
-    )
-    .add(
-        'with color thumblist',
-        withInfo({ header: true })(() => (
-            <ProdItem prodItem={prodItemData} hasColorThumb={true} />
-        ))
-    )
+  .add(
+    'default',
+    withInfo({ header: true })(() => <ProdItem prodItem={prodItemData} />)
+  )
+  .add(
+    'with color thumblist',
+    withInfo({ header: true })(() => (
+      <ProdItem prodItem={prodItemData} hasColorThumb={true} />
+    ))
+  )

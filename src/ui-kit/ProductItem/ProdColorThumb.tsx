@@ -20,7 +20,11 @@ const ProdColorThumb: React.SFC<IProdColorThumbProps> = ({
       className="prod__thumb--item"
       onMouseEnter={() => handleHoverColor(color)}
     >
-      <img className="thumb-img" src={color.image[0]} alt="product-item-img" />
+      <img
+        className="thumb-img"
+        src={color.images[0].sm}
+        alt="product-item-img"
+      />
     </div>
   )
 }

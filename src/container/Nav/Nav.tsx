@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 
 import data from './data'
-import { NavItem } from 'ui-kit/NavItem'
+import NavItem from 'ui-kit/NavItem'
 import './Nav.scss'
 
 export interface INavProps {

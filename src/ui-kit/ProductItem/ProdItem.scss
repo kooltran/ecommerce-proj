@@ -3,70 +3,66 @@
 @import '../styles/variables';
 
 .prod {
-    &__item {
-        width: 400px;
-        text-align: center;
+  &__item {
+    text-align: center;
 
-        &--price {
-            font-size: 16px;
-        }
-        
-        &--img {
-            width: 100%;
-            margin-bottom: 10px;
-
-            &:hover {
-                border: 1px solid $color-dark-gray;   
-            }
-        }
-
-        .slick-next {
-            top: 45%;
-            right: -15px;
-            background-image: url('../../assets/icons/icon_arrow.png');
-            background-repeat: no-repeat;
-            width: 12px;
-            height: 20px;
-
-            &::before {
-                display: none;
-            }
-        }
-
-        &--thumb {
-            .prod__item--name {
-                margin: 5px 0 10px;
-                text-align: left;
-                font-weight: 600;
-            }
-
-            .prod__item--price {
-                text-align: left;
-                font-size: 20px;
-            }
-        }
+    &--price {
+      font-size: 16px;
     }
 
+    &--img {
+      width: 100%;
+      margin-bottom: 10px;
 
-    
-
-    &__thumb {
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid $color-dark-gray;
-
-        &--item {
-            margin-right: 5px;
-            border: 1px solid $color-gray;
-            cursor: pointer;
-
-            &:hover {
-                border: 1px solid $color-black;
-            }
-
-            .thumb-img {
-                width: 100%;
-            }
-        }
+      &:hover {
+        border: 1px solid $color-dark-gray;
+      }
     }
+
+    .slick-next {
+      top: 45%;
+      right: -15px;
+      background-image: url('../../assets/icons/icon_arrow.png');
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 20px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--thumb {
+      .prod__item--name {
+        margin: 5px 0 10px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .prod__item--price {
+        text-align: left;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__thumb {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $color-dark-gray;
+
+    &--item {
+      margin-right: 5px;
+      border: 1px solid $color-gray;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $color-black;
+      }
+
+      .thumb-img {
+        width: 100%;
+      }
+    }
+  }
 }
