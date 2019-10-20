@@ -1,24 +1,27 @@
 import * as React from 'react'
 import { homepageAction } from './homepage.action'
 import { connect } from 'react-redux'
-import { Text } from 'ui-kit/Text'
+import { ProdItem } from 'ui-kit/ProductItem'
+import { IProdItem } from 'interfaces/prod-item'
 
 export interface IHomepage {
+  data: [IProdItem]
   homepageAction: () => void
 }
 
 class Homepage extends React.Component<IHomepage> {
-  componentDidMount() {
-    this.props.homepageAction()
+
+  async componentDidMount() {
+    await this.props.homepageAction();
   }
 
   render() {
-    console.log(this.props)
+    const { data } = this.props;
+    console.log(data);
     return (
-      <Text isBold={true}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </Text>
+      <>
+        {data && data.map(item => <ProdItem key={item.id} prodItem={item} />)}
+      </>
     )
   }
 }
