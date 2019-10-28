@@ -4,7 +4,7 @@ import homeReducer, {
 } from '../pages/Homepage/homepage.reducer'
 
 interface IReducers {
-  homeReducer: IHomePageReducer
+  [propName: string]: any
 }
 
 export default combineReducers<IReducers>({

@@ -2,25 +2,23 @@ import * as React from 'react'
 import { homepageAction } from './homepage.action'
 import { connect } from 'react-redux'
 import { ProdItem } from 'ui-kit/ProductItem'
+import { IHomepage } from './interfaces'
 import { IProdItem } from 'interfaces/prod-item'
-
-export interface IHomepage {
-  data: [IProdItem]
-  homepageAction: () => void
-}
+import { isEmpty } from 'lodash'
 
 class Homepage extends React.Component<IHomepage> {
-
-  async componentDidMount() {
-    await this.props.homepageAction();
+  componentDidMount() {
+    this.props.homepageAction()
   }
 
   render() {
-    const { data } = this.props;
-    console.log(data);
+    const { data } = this.props
     return (
       <>
-        {data && data.map(item => <ProdItem key={item.id} prodItem={item} />)}
+        {!isEmpty(data) &&
+          data.map((item: IProdItem) => (
+            <ProdItem key={item.id} prodItem={item} />
+          ))}
       </>
     )
   }
