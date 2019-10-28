@@ -1,10 +1,11 @@
 import { actionTypes } from 'config'
+import { IProdItem } from 'interfaces/prod-item'
 
 export interface IHomePageReducer {
   initRequest: boolean
   initSuccess: boolean
   initFail: boolean
-  data: any
+  data: IProdItem[]
   error: any
 }
 
@@ -27,6 +28,7 @@ export default function homeReducer(state = initialState, action: any) {
       return {
         ...state,
         initSuccess: true,
+        initRequest: false,
         data: action.payload,
       }
     case actionTypes.FETCH_INIT_FAIL:

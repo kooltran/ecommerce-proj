@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { homepageAction } from './homepage.action'
 import { connect } from 'react-redux'
-import { Text } from 'ui-kit/Text'
-
-export interface IHomepage {
-  homepageAction: () => void
-}
+import { ProdItem } from 'ui-kit/ProductItem'
+import { IHomepage } from './interfaces'
+import { IProdItem } from 'interfaces/prod-item'
+import { isEmpty } from 'lodash'
 
 class Homepage extends React.Component<IHomepage> {
   componentDidMount() {
@@ -13,12 +12,14 @@ class Homepage extends React.Component<IHomepage> {
   }
 
   render() {
-    console.log(this.props)
+    const { data } = this.props
     return (
-      <Text isBold={true}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </Text>
+      <>
+        {!isEmpty(data) &&
+          data.map((item: IProdItem) => (
+            <ProdItem key={item.id} prodItem={item} />
+          ))}
+      </>
     )
   }
 }

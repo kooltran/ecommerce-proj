@@ -1,13 +1,15 @@
 @import '../../ui-kit/styles/variables';
 
 .topbar {
-  border-bottom: 1px solid $color-dark-gray;
+  border-bottom: 1px solid $color-gray;
   display: flex;
-  &__seach {
-    .anticon-search {
+  &__search {
+    &-icon {
+      display: none;
       padding-left: 10px;
     }
     .input-text {
+      display: none;
       border: none;
       height: 50px;
       padding-left: 20px;
@@ -21,11 +23,39 @@
     align-self: center;
     .cart {
       &__text {
+        display: none;
         padding-left: 5px;
       }
     }
     .checkout {
+      display: none;
       padding-left: 20px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .topbar {
+    &__seach {
+      .anticon-search {
+        display: block;
+      }
+      .input-text {
+        display: block;
+      }
+      &__link {
+        display: none; 
+      }
+    }
+  
+    &__payment {
+      .cart {
+        &__text {
+          display: block;
+        }
+      }
+      .checkout {
+        display: block;
+      }
     }
   }
 }

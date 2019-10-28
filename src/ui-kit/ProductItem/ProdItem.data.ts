@@ -8,6 +8,7 @@ import prodImgColor2Style3 from 'assets/img/color2/prod_item1-color2-style3.jpg'
 import prodImgColor2Style4 from 'assets/img/color2/prod_item1-color2-style4.jpg'
 
 export const prodItemData = {
+  id: 1,
   name: 'ULTRABOOST ST SHOES',
   price: '299$',
   shoeColors: [

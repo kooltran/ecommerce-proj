@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import {Icon} from 'antd'
 
 import data from './data'
 import { NavItem } from 'ui-kit/NavItem'
@@ -16,6 +17,9 @@ const Nav: React.SFC<INavProps> = ({ className }) => {
 
   return (
     <nav className={styleNav}>
+      <div className="nav__menu">
+        <Icon type="menu" style={{ fontSize: '20px' }} />
+      </div>
       <div className="nav__list">
         <NavItem name="home" isActive />
         <NavItem name="catalog" hasSubNav={Boolean(data.length)}>

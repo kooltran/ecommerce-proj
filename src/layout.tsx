@@ -5,8 +5,8 @@ import {
   Switch,
   // RouteComponentProps,
 } from 'react-router-dom'
-import Homepage from './pages/Homepage'
-import configureStore from './redux/store'
+import Homepage from '../src/pages/Homepage'
+import configureStore from '../src/redux/store'
 import { Provider } from 'react-redux'
 import {TopBar} from './container/TopBar'
 import {Nav} from './container/Nav'
@@ -15,7 +15,7 @@ import {Footer} from './ui-kit/Footer'
 
 const store = configureStore()
 
-export default class App extends React.Component<{}, {}> {
+export default class Layout extends React.Component<{}, {}> {
   render() {
     return (
       <Provider store={store}>
