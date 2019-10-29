@@ -3,11 +3,7 @@ import homeReducer, {
   IHomePageReducer,
 } from '../pages/Homepage/homepage.reducer'
 
-interface IReducers {
-  [propName: string]: any
-}
-
-export default combineReducers<IReducers>({
+export default combineReducers({
   homeReducer,
 })
 
